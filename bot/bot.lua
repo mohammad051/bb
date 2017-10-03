@@ -1,5 +1,5 @@
--- #Beyond Reborn Robot
--- #@BeyondTeam
+-- #kingdoom Reborn Robot
+-- #@kingdoomTeam
 
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
@@ -77,7 +77,7 @@ function save_config( )
 end
 
 function create_config( )
-	io.write('\n\27[1;33m>> Input your Telegram ID for set Sudo : 	\27[0;39;49m')
+	io.write('\n\27[1;33m>> id admin kingdoom : 	\27[0;39;49m')
 	local sudo_id =  tonumber(io.read())
   -- A simple config with basic plugins and ourselves as privileged user
 	config = {
@@ -94,24 +94,22 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》Beyond Reborn v6.0
-An advanced administration bot based on https://valtman.name/telegram-cli
+    info_text = [[》kingdoom Reborn v6.0
 
-》https://github.com/BeyondTeam/BDReborn 
+
+
 
 》Admins :
-》@SoLiD ➣ Founder & Developer《
-》@Makan ➣ Developer《
-》@ToOfan ➣ Developer《
+
 
 》Special thanks to :
-》Beyond Team Members
+》kingdoom Team Members
 
 》Our channel :
-》@BeyondTeam《
+》@kingdoomTeam《
 
 》Our website :
-》http://Beyond-Dev.iR
+》
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
